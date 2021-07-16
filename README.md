@@ -18,16 +18,16 @@ https://spotify-rest.up.railway.app
 ## Available Endpoints
 
 ### ```/artist```
-Data: Returns the query result's artist details and their albums
-Parameters:
+#### Data: Returns the query result's artist details and their albums
+#### Parameters:
 - ```query```: the artist's name
 
 ### ```/album```
-Data: Returns the album's details and it's tracks
-Parameters:
+#### Data: Returns the album's details and it's tracks
+#### Parameters:
 - ```id```: the albums' id
 
 ### ```/track```
-Data: Returns the track's details
-Parameters:
+#### Data: Returns the track's details
+#### Parameters:
 - ```id```: the track's id
