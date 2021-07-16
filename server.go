@@ -48,7 +48,7 @@ func main(){
 		if err != nil{
 			panic(err)
 		}
-		c.JSON(http.StatusOK,gin.H{"data:" : res} )
+		c.JSON(http.StatusOK,gin.H{"data" : res} )
 	})
 
 	r.GET("/album", func(c*gin.Context){
