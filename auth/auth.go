@@ -36,6 +36,7 @@ func init(){
 
 func ValidateToken(){
 	if LAST_REFRESH.Sub(time.Now()).Minutes() < REFRESH_RATE || ACCESS_TOKEN == ""{
+		log.Println("[LOG] Token expired, requesting a new one")
 		url:= "https://accounts.spotify.com/api/token"
 
 		data:= url2.Values{}
@@ -65,4 +66,5 @@ func ValidateToken(){
 		json.Unmarshal(body, &res)
 		ACCESS_TOKEN = res["access_token"].(string)
 	}
+	log.Println("[LOG] Token is still valid, skipping auth")
 }
