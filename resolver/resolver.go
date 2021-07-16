@@ -110,7 +110,6 @@ func GetAlbum(id string) (*model.Album){
 		ID:     result["id"].(string),
 		Name:   result["name"].(string),
 		Image:  result["images"].([]interface{})[0].(map[string]interface{})["url"].(string),
-		Tracks: GetAlbumTracks(result["id"].(string)),
 	}
 }
 
