@@ -3,6 +3,7 @@ package main
 import (
 	"github.com/abenbyy/spotify-rest/resolver"
 	"github.com/gin-gonic/gin"
+	"log"
 	"net/http"
 	"os"
 )
@@ -57,7 +58,8 @@ func main(){
 			c.JSON(http.StatusOK, gin.H{"error": "please supply an album id"})
 		}
 
-		res := resolver.GetAlbum(id)
+		res := resolver.GetAlbumTracks(id)
+		log.Println(res)
 		c.JSON(http.StatusOK, gin.H{"data": res})
 	})
 
