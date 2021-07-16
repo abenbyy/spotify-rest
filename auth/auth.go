@@ -29,7 +29,7 @@ func init(){
 			log.Fatal("Error loading .env file")
 		}
 	}
-
+	LAST_REFRESH = time.Now()
 	CLIENT_ID = os.Getenv("CLIENT_ID")
 	CLIENT_SECRET = os.Getenv("CLIENT_SECRET")
 }
