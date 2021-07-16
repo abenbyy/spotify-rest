@@ -65,6 +65,7 @@ func ValidateToken(){
 		var res map[string]interface{}
 		json.Unmarshal(body, &res)
 		ACCESS_TOKEN = res["access_token"].(string)
+		return
 	}
 	log.Println("[LOG] Token is still valid, skipping auth")
 }
